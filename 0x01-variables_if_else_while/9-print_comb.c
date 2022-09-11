@@ -1,22 +1,27 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Print single digit numbers in the formart
  *
- * Return: Always 0 (Success)
+ * Description: Sepaeated by commas
+ * Return: Always(0) Success
  */
+
 int main(void)
 {
-int k;
+	int i;
 
-for (k = 48; k <= 57; k++)
-{
-putchar(k);
-if (k < 57)
-{
-putchar(',');
-putchar(' ');
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+	}
+	if (i != 57)
+	{
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+
+	return (0);
 }
-}
-putchar('\n');
-return (0);
-}
+
