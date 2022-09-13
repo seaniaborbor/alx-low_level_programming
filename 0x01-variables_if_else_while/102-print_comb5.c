@@ -1,35 +1,35 @@
-#include <stdarg.h>
-/**
-* main - Entry 
-*
-* Return: 0 success 
-*/
+#include <stdio.h>
 
-int int main(void)
+/**
+ * main - main - two pairs of numbers that do not repeat
+ *
+ * Return (0)
+ */
+
+int main(void)
 {
-int n1 = 0, n2;
-while(n1 <= 99)
-{
-n2 = n1;
-while(n2<=99)
-{
-if(n2 != n1)
-{
-putchar((n1/10)+0);
-putchar((n1%10)+0);
-putchar((' '));
-putchar((n2/10)+0);
-putchar((n2%10)+0);
-if(n1 != 98 || n2 != 98)
-{
-putchar(',');
-putchar(' ');
-}
-}
-++n2;
-}
-++n1;
-}
-putchar('\n');
-return 0;
+	int i, j;
+
+	for (j = 0; j <= 99; j++)
+	{
+		for (i = j; i <= 99; i++)
+		{
+			if (i != j)
+			{
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				putchar(' ');
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+			}
+			if (j * 100 + i != 9899)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
