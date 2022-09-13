@@ -16,11 +16,11 @@ int main(void)
 		{
 			if (i != j)
 			{
-				putchar(j / 10 + 48);
-				putchar(j % 10 + 48);
+				putchar(j / 10 + 0);
+				putchar(j % 10 + 0);
 				putchar(' ');
-				putchar(i / 10 + 48);
-				putchar(i % 10 + 48);
+				putchar(i / 10 + 0);
+				putchar(i % 10 + 0);
 			}
 			if (j * 100 + i != 9899)
 			{
