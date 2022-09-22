@@ -1,26 +1,37 @@
 include "main.h"
+#include "main.h"
 
 /**
- *print_number - prints an integer
- *@n: integer to print
- *
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
-
 void print_number(int n)
 {
-	unsigned int u = n; /* without u the code works but on the INT_MIN*/
+	unsigned int m, d, count;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		u = -u;
+		_putchar(45);
+		m = n * -1;
+	}
+	else
+	{
+		m = n;
 	}
 
-	if (u / 10)
-		print_number(u / 10);   /*
-					 *recursion: function receives each
-					 * element of u  one by one
-					 */
+	d = m;
+	count = 1;
 
-	_putchar((u % 10) + '0');
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
+	}
 }
+
