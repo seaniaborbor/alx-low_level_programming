@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer.
- * @n: input integer.
- * Return: no return.
+ * print_number - Prints a passed number to stdout
+ * @n: This is the number to be printed
+ *
+ * Return: Null Void
  */
 void print_number(int n)
 {
@@ -18,6 +19,7 @@ void print_number(int n)
 	{
 		m = n;
 	}
+
 
 	d = m;
 	count = 1;
