@@ -1,19 +1,33 @@
-#include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
+ * _strstr - searches a string for a substring
  *
- * Return: Always 0.
+ * @haystack: string to search
+ * @needle: sub string to search for
+ *
+ * Return: pointer to byte at start of substring, or
+ * NULL if substring not found
  */
-int main(void)
+char *_strstr(char *haystack, char *needle)
 {
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
+	char *hayptr, *ndlptr;
 
-    t = _strstr(s, f);
-    printf("%s\n", t);
-    return (0);
+	while (*haystack != 0)
+	{
+		hayptr = haystack;
+		ndlptr = needle;
+		if (*ndlptr == 0)
+			return (haystack);
+		while (*hayptr != 0)
+		{
+			if (*hayptr != *ndlptr)
+				break;
+			hayptr++;
+			ndlptr++;
+			if (*ndlptr == 0)
+				return (haystack);
+		}
+		haystack++;
+	}
+	return (0);
 }
 
